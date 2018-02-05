@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>index</title>
+<style type="text/css">
+body{
+	width:auto;
+	high :100%;
+}
+div.main
+{
+border:2px solid #a1a1a1;
+padding:10px 40px; 
+background:#dddddd;
+Border-top:width:1px;
+Border-top-height:1px;
+border-radius:25px;
+}
+</style>
+</head>
+
+<body>
+<div class="main">
+    <div class="words">
+    <font class="title" color="#252525" size="+3">Weather_Info You will become weather pro!</font>
+    </div>
+	<div class="chart" id="chart" style="width: 800px; height: 600px;border-bottom: thin;border-left-width: thin;" align="center">
+	<br>
+	<br>
+	    <script src="js_file/echarts.common.min.js"></script>
+		<script type="text/javascript">
+		 var myChart = echarts.init(document.getElementById('chart'));
+          option = {
+    title: {
+        text: '天气情况'
+    },
+    tooltip: {},
+    legend: {
+        data:['今日气温','明日气温']
+    },
+    xAxis: {
+        data: ["最低气温","最高气温"]
+    },
+    yAxis: {},
+    series: [{
+        name: '今日气温',
+        type: 'bar',
+        data: [ 5 , 10]
+},
+{
+    name: '明日气温',
+    type: 'bar',
+    data: [23,43],
+}]
+
+}
+        myChart.setOption(option);
+		</script>		
+	</div>
+</div>
+</body>
+</html>
